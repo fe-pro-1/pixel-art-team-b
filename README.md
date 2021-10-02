@@ -1,1 +1,3 @@
-# pixel-art-team-b
+# pixel-art-team-a
+
+Hello Team A

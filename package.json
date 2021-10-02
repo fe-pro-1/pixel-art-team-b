@@ -1,0 +1,22 @@
+{
+  "name": "pixel-art-team-a",
+  "version": "1.0.0",
+  "description": "Pixel Art Editor",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fe-pro-1/pixel-art-team-a.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fe-pro-1/pixel-art-team-a/issues"
+  },
+  "homepage": "https://github.com/fe-pro-1/pixel-art-team-a#readme",
+  "devDependencies": {
+    "http-server": "^13.0.2"
+  }
+}
