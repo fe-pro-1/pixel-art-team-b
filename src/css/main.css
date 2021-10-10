@@ -103,6 +103,34 @@ a:hover {
   display: none;
 }
 
+.about {
+  font-size: 0.8rem;
+  background-color: #F2F2F2;
+}
+.about .wrapper .footer {
+  display: flex;
+  justify-content: space-between;
+}
+.about .wrapper .footer__logo {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.15rem;
+}
+.about .wrapper .footer__copy {
+  font-size: 0.5rem;
+  padding: 0.1rem;
+}
+.about .wrapper .footer__privacy {
+  padding: 0.1rem;
+  font-size: 0.5rem;
+}
+.about__title {
+  display: none;
+}
+.about__item {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .only-desktop {
     display: unset;
@@ -145,6 +173,34 @@ a:hover {
     position: relative;
     border-radius: 2px;
     transition: 0.3s;
+  }
+
+  .about .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about .wrapper .footer {
+    display: block;
+  }
+  .about .wrapper .footer__logo {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+  }
+  .about .wrapper .footer__copy {
+    padding: 0.4rem;
+  }
+  .about .wrapper .footer__privacy {
+    padding: 0.4rem;
+  }
+  .about__title {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.4rem;
+  }
+  .about__item {
+    display: block;
+    padding: 0.2rem;
   }
 }
 
