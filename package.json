@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fe-pro-1/pixel-art-team-a.git"
+    "url": "git+https://github.com/fe-pro-1/pixel-art-team-b.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fe-pro-1/pixel-art-team-a/issues"
+    "url": "https://github.com/fe-pro-1/pixel-art-team-b/issues"
   },
-  "homepage": "https://github.com/fe-pro-1/pixel-art-team-a#readme",
+  "homepage": "https://github.com/fe-pro-1/pixel-art-team-b#readme",
   "devDependencies": {
     "http-server": "^13.0.2"
   }
