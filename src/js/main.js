@@ -1,3 +1,3 @@
-import editor from './editor/editor';
+ import editor from './editor/editor';
 
 const editor = new Editor();
