@@ -70,43 +70,73 @@ a:hover
     &__title
 
     &-wrapper
+        padding: 0.5rem 0.25rem
 
-        padding: 0.25rem
-        canvas
-            width: calc(100% - 10px)
-            height: auto
+        .container
+            display: flex
+            flex-flow: row
+            flex-wrap: wrap
+            justify-content: center
+            max-width: 400px
+            width: 100%
 
+.canvas
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__row
+        display: flex
+        text-align: center
+        color: red
+
+    &__cell
+        width: 20px
+        height: 20px
+        border: 1px solid black
 
 .tools
     flex-wrap: wrap
     display: flex
     flex-direction: column
     align-content: center
-    justify-content: space-around
+    justify-content: center
     align-items: stretch
 
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
 
-    &-link
+    &__label
+        padding-right: 10px
+
+    &__input
+        width: 50px
+
+    &__link
         margin: 0.5rem
         padding: 0.5rem
         font-size: 1rem
-        color: rgb(205,216,228)
-        text-shadow: 0 -1px rgb(46,53,58)
+        color: rgb(205, 216, 228)
+        text-shadow: 0 -1px rgb(46, 53, 58)
         text-decoration: none
         user-select: none
         line-height: 1.5rem
         outline: none
-        border: 1px solid rgba(33,43,52,1)
+        border: 1px solid rgba(33, 43, 52, 1)
         border-radius: 3px
-        background: rgb(81,92,102) linear-gradient(rgb(81,92,102), rgb(69,78,87))
+        background: rgb(81, 92, 102) linear-gradient(rgb(81, 92, 102), rgb(69, 78, 87))
+
         &:hover
             color: $pink
+
 .about
     font-size: 0.8rem
 
-
     .wrapper
         background-color: $background-color-footer
+
         .footer
             display: flex
             justify-content: space-between

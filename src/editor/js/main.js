@@ -1,29 +1,36 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+import {Editor} from './editor';
 
-const CANVAS_SIZE = canvas.clientWidth;
-const CELLS_COUNT = 16;
-const CELLS_STEP = CANVAS_SIZE / CELLS_COUNT;
+const editorContainer = document.querySelector('.editor .editor-wrapper');
+const rowsInput = document.querySelector('.editor .tools-rows');
+const colsInput = document.querySelector('.editor .tools-cols');
+const cellWidthInput = document.querySelector('.editor .tools-cell-width');
+const colourInput = document.querySelector('.editor .tools-colour');
+const resetButton = document.querySelector('.editor .tools-reset');
 
-const STROKE_WIDTH = 1;
-const STROKE_COLOR = '#000000';
+const editor = new Editor();
 
-canvas.width = CANVAS_SIZE;
-canvas.height = CANVAS_SIZE;
+const build = () => {
+    editor.build(rowsInput.value, colsInput.value);
+    editorContainer.appendChild(editor.canvas);
+};
 
-ctx.lineWidth = STROKE_WIDTH;
-ctx.strokeStyle = STROKE_COLOR;
+const rebuild = () => {
+    editor.destroy();
+    editor.build(rowsInput.value, colsInput.value);
+    editorContainer.appendChild(editor.canvas);
+};
 
-for (let x = 0; x <= CELLS_COUNT; x++) {
-    ctx.beginPath();
-    ctx.moveTo(x * CELLS_STEP, 0);
-    ctx.lineTo(x * CELLS_STEP, CANVAS_SIZE);
-    ctx.stroke();
-}
+const setup = () => {
+    editor.setup({
+        colour: colourInput.value,
+        width: cellWidthInput.value
+    });
+};
 
-for (let y = 0; y <= CELLS_COUNT; y++) {
-    ctx.beginPath();
-    ctx.moveTo(0, y * CELLS_STEP);
-    ctx.lineTo(CANVAS_SIZE, y * CELLS_STEP)
-    ctx.stroke();
-}
+rowsInput.addEventListener('change', rebuild);
+colsInput.addEventListener('change', rebuild);
+cellWidthInput.addEventListener('change', setup);
+colourInput.addEventListener('change', setup);
+resetButton.addEventListener('click', rebuild);
+
+build();

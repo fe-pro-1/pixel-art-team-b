@@ -59,11 +59,31 @@ a:hover {
   text-align: center;
 }
 .editor-wrapper {
-  padding: 0.25rem;
+  padding: 0.5rem 0.25rem;
 }
-.editor-wrapper canvas {
-  width: calc(100% - 10px);
-  height: auto;
+.editor-wrapper .container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.canvas__row {
+  display: flex;
+  text-align: center;
+  color: red;
+}
+.canvas__cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
 }
 
 .tools {
@@ -71,10 +91,21 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: space-around;
+  justify-content: center;
   align-items: stretch;
 }
-.tools-link {
+.tools__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tools__label {
+  padding-right: 10px;
+}
+.tools__input {
+  width: 50px;
+}
+.tools__link {
   margin: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
@@ -88,7 +119,7 @@ a:hover {
   border-radius: 3px;
   background: #515c66 linear-gradient(#515c66, #454e57);
 }
-.tools-link:hover {
+.tools__link:hover {
   color: #F82785;
 }
 
