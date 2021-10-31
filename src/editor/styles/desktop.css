@@ -1,0 +1,54 @@
+@media (min-width: 1024px) {
+  .only-desktop {
+    display: unset;
+  }
+
+  .nav {
+    flex-direction: row;
+    align-items: center;
+  }
+  .nav__logo {
+    font-size: 2rem;
+  }
+  .editor {
+    padding: 0.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .editor-main {
+    flex: 2;
+  }
+  .editor__title {
+    text-align: center;
+  }
+  .about .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about .wrapper .footer {
+    display: block;
+  }
+  .about .wrapper .footer__logo {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+  }
+  .about .wrapper .footer__copy {
+    padding: 0.4rem;
+  }
+  .about .wrapper .footer__privacy {
+    padding: 0.4rem;
+  }
+  .about__title {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.4rem;
+  }
+  .about__item {
+    display: block;
+    padding: 0.2rem;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */

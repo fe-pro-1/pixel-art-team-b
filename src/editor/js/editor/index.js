@@ -81,7 +81,10 @@ export class Editor {
     }
     
     #fillCell(cell) {
-        cell.style.backgroundColor = this.#colour;
+        if (cell.classList.contains('canvas__cell')) {
+            cell.style.backgroundColor = this.#colour;
+        }
+        
     }
     
     #onPointerDown = ((event) => {
@@ -90,7 +93,7 @@ export class Editor {
     }).bind(this);
     
     #onPointerMove = ((event) => {
-        if (this.#isDrawing === true && event.target.classList.contains('canvas__cell')) {
+        if (this.#isDrawing === true) {
             this.#fillCell(event.target);
         }
     }).bind(this);
