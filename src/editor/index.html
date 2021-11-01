@@ -1,14 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Art Editor</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Editor</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="./../editor/styles/main.css">
+
 </head>
 <body>
 <header class="header">
@@ -29,22 +32,36 @@
     </div>
 </header>
 
-<section class="main">
-    <div class="main__name">Pixel Art Editor</div>
-    <p class="main__description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-
-    <a href="#" class="main__button">Start Creating!</a>
-    <div class="main__slider relative">
-        <img class="main__slide" src="../src/images/main_img.png" alt="interesting view">
+<section class="editor">
+    <div class="editor-main">
+        <h1 class="editor__title">PixelArt</h1>
+        <div class="editor-wrapper">
+        </div>
     </div>
-    <div class="pagination">
-        <a href="#" class="pagination__btn pagination__previous">prev</a>
-        <a href="#" class="pagination__btn active">1</a> <a href="#" class="pagination__btn">2</a>
-        <a href="#" class="pagination__btn">3</a> <a href="#" class="pagination__btn pagination__next">next</a>
+
+    <div class="tools">
+        <div class="tools__row">
+            <label for="rows" class="tools__label">Rows count: </label>
+            <input id="rows" class="tools-rows tools__input" type="number" value="16">
+        </div>
+        <div class="tools__row">
+            <label for="cols" class="tools__label">Cols count: </label>
+            <input id="cols" class="tools-cols tools__input" type="number" value="16">
+        </div>
+        <div class="tools__row">
+            <label for="cell-width" class="tools__label">Cell width: </label>
+            <input id="cell-width" class="tools-cell-width tools__input" type="number" value="20">
+        </div>
+        <div class="tools__row">
+            <label for="colour" class="tools__label">Colour: </label>
+            <input id="colour" class="tools-colour tools__input" type="color" value="16">
+        </div>
+        <div class="tools__row">
+            <a id="clear" class="tools-reset tools__link">Clear Canvas</a>
+        </div>
     </div>
 </section>
+
 <section class="about">
     <div class="wrapper">
         <footer class="footer">
@@ -54,30 +71,27 @@
         </footer>
         <div class="about-products">
             <p class="about__title">Products</p>
-            <a class="about__item" href="#">Product</a>
-            <a class="about__item" href="#">Product</a>
+            <a class="about__item" href="#">Product</a> <a class="about__item" href="#">Product</a>
             <a class="about__item" href="#">Product</a>
         </div>
         <div class="about-features">
             <p class="about__title">Features</p>
-            <a class="about__item" href="#">Feature</a>
-            <a class="about__item" href="#">Feature</a>
+            <a class="about__item" href="#">Feature</a> <a class="about__item" href="#">Feature</a>
             <a class="about__item" href="#">Feature</a>
         </div>
         <div class="about-resources">
             <p class="about__title">Resources</p>
-            <a class="about__item" href="#">Resource</a>
-            <a class="about__item" href="#">Resource</a>
+            <a class="about__item" href="#">Resource</a> <a class="about__item" href="#">Resource</a>
             <a class="about__item" href="#">Resource</a>
         </div>
         <div class="about-company">
             <p class="about__title">Company</p>
-            <a class="about__item" href="#">Company</a>
-            <a class="about__item" href="#">Company</a>
+            <a class="about__item" href="#">Company</a> <a class="about__item" href="#">Company</a>
             <a class="about__item" href="#">Company</a>
         </div>
     </div>
 </section>
 
+<script src="./../editor/js/main.js" type="module"></script>
 </body>
 </html>
